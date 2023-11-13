@@ -424,6 +424,8 @@ DisplaySubTitle "BIOS checks"
     Test 'Virtualization (VT-X) is enabled In BIOS'`
         -assertTrue ([SystemInformation]::IsVirtualisationEnabledInTheFirmware())`
         -message "Virtualization (VT-X) is currently disabled In the BIOS. Please enable."
+        # This is currently unable to be detected from within a VM and will fail, even if
+        # it is correctly set.
 
 DisplaySubTitle "Windows feature checks"
 
